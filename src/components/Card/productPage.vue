@@ -26,7 +26,6 @@
                 this.$store.dispatch('getProducts')
             }
             console.log('ProductPage mounted');
-            console.log(this.$store.getters.allProducts);
 
         }
     }

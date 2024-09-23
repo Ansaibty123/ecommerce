@@ -1,23 +1,24 @@
 <template>
     <div>
-        <!-- <Login/> -->
-         <!-- <SignUp/> -->
+        <!-- <LoginPage/> -->
+        <SignUpPage/>
+        <!-- <HomePage/> -->
 
-         <HomePage/>
     </div>
 </template>
 
 <script>
 import HomePage from '@/components/HomePage.vue';
-import Login from '@/components/Login.vue';
-import SignUp from '@/components/SignUp.vue';
+import LoginPage from './LoginPage.vue';
+import SignUpPage from './SignUpPage.vue';
+
 
 
 
 export default {
     components: {
-        Login,
-        SignUp,
+        LoginPage,
+        SignUpPage,
         HomePage
     }
 }

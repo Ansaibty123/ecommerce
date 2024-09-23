@@ -1,5 +1,5 @@
 <template>
-    <div class="container w-100 g-0">
+    <div class="container-fluid w-100 g-0">
         <div class="row g-0 ">
             <div v-for="item in allProducts" :key="item.id"
                 class="col-md-4 col-lg-3 col-6 d-flex justify-content-center">
