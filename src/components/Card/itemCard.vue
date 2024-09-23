@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import ProductPage from './productPage.vue';
 
 export default {
     props: ['item'],

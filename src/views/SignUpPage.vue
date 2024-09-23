@@ -4,8 +4,8 @@
   
         <div class="fs-1 py-3 fw-bold">Create an account</div>
   
-        <div class="fs-3">
-          <form @submit.prevent="handleLogin" class="d-flex flex-column gap-4">
+        <div class="fs-3 col-6 custom-max-width d-flex justify-content-center">
+          <form @submit.prevent="handleLogin" class="d-flex flex-column gap-4 w-100">
             <div class="d-flex flex-column fw-bold">
   
               <label for="nameInput">Name </label>
@@ -46,4 +46,8 @@
   
   }
   </script>
-  
+   <style scoped>
+   .custom-max-width {
+     max-width: 500px;
+   }
+  </style>
