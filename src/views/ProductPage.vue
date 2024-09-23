@@ -7,7 +7,7 @@
       <div class="col-md-6">
         <div class="custom-width row gap-2 gap-md-5 px-2 py-md-5">
           <h3>{{ product.title }}</h3>
-          <p class="fs-md-4 fs-5">Description-<span class="text-info fs-6">{{ product.description }}</span></p>
+          <p class="fs-md-4 fs-5">Description- <span class="text-info fs-6"> {{ product.description }}</span></p>
           <p class="fs-md-4 fs-5 fw-bold">Price: ${{ product.price }}</p>
         </div>
 
