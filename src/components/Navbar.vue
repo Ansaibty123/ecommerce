@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex px-4 py-4 px-md-4 border justify-content-between">
+    <div class="d-flex px-2 py-4 px-md-4 border justify-content-between">
         <div class="fw-bold text-success px-md-3">
             ShopHAVEN
         </div>
