@@ -3,7 +3,7 @@
         <div class="fw-bold text-success px-md-3">
             ShopHAVEN
         </div>
-        <div class="d-flex gap-3 fw-bold ">
+        <div class="d-flex gap-2 gap-md-3 fw-bold ">
             <router-link to="/about" class="text-decoration-none text-info"> About</router-link>
             <router-link to="/home" class="text-decoration-none text-info"> Home</router-link>
             <router-link to="/contact" class="text-decoration-none text-info"> Contact</router-link>
