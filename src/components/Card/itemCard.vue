@@ -1,7 +1,7 @@
 <template>
     <div @click="goToProduct(item.id)" class="p-2 p-md-3 d-flex 
     flex-column align-items-center 
-    border border-1 border-success my-3 my-md-4">
+     shadow-lg border-success my-3 my-md-4">
         <div class="custom-image p-2">
             <img :src="item.image" alt="" class="img-fluid custom-img">
         </div>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        <Navbar/>
         <HomePage/>
 
     </div>
@@ -8,13 +8,14 @@
 
 <script>
 import HomePage from '@/components/HomePage.vue';
+import Navbar from '@/components/Navbar.vue';
 
 
 
 
 export default {
     components: {
-        
+        Navbar,
         HomePage
     }
 }

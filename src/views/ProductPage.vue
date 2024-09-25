@@ -1,7 +1,7 @@
 <template>
   <div v-if="product" class="container-fluid vh-100 pt-md-5">
     <div class="d-flex flex-column flex-md-row">
-      <div class="container col-md-6 text-center pt-md-3 border shadow-sm">
+      <div class="container col-md-6 text-center pt-md-3 border shadow-lg">
         <img :src="product.image" alt="Product Image" class="img-fluid w-50 py-4 custom-max-width img-fit">
       </div>
       <div class="col-md-6 pt-3 pt-md-0 ps-3">
