@@ -10,7 +10,7 @@
         </div>
 
         <div class="fw-bold px-md-3">
-            <RouterLink class="text-decoration-none text-secondary">Cart</RouterLink>
+            <RouterLink to="/cart" class="text-decoration-none text-secondary">Cart</RouterLink>
         </div>
     </div>
 </template>
