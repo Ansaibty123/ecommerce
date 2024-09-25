@@ -5,6 +5,7 @@ import SignUpPage from '@/views/SignUpPage.vue'
 import LoginPage from '@/views/LoginPage.vue'
 import AboutPage from '@/views/AboutPage.vue'
 import ContactPage from '@/views/ContactPage.vue'
+import CartPage from '@/views/CartPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
     path: '/about',
     name: 'about',
     component: AboutPage
+   },
+   {
+    path: '/cart',
+    name: 'cart',
+    component: CartPage
    },
 
     {
