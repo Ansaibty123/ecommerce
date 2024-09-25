@@ -4,9 +4,9 @@
             ShopHAVEN
         </div>
         <div class="d-flex gap-3 fw-bold ">
-            <router-link class="text-decoration-none text-info"> About</router-link>
-            <router-link class="text-decoration-none text-info"> Home</router-link>
-            <router-link class="text-decoration-none text-info"> Contact</router-link>
+            <router-link to="/about" class="text-decoration-none text-info"> About</router-link>
+            <router-link to="/home" class="text-decoration-none text-info"> Home</router-link>
+            <router-link to="/contact" class="text-decoration-none text-info"> Contact</router-link>
         </div>
 
         <div class="fw-bold px-md-3">
