@@ -24,17 +24,31 @@
       <div class="d-flex" style="width: 50%;">
 
         <div class="fw-bold px-2 px-md-3 px-lg-4 text-center" style="flex: 1;">
-          <RouterLink to="/cart" class="text-decoration-none text-secondary"><i class="fa-solid fa-cart-plus fa-lg"></i></RouterLink>
+          <RouterLink to="/cart" class="text-decoration-none text-secondary"><i class="fa-solid fa-cart-plus fa-lg"></i>
+          </RouterLink>
         </div>
         <div class="fw-bold px-2 px-md-3 px-lg-4  " style="flex: 1;">
           <div @click="wishList" class="text-center">
             <i class="fa-solid fa-heart fa-lg"></i>
           </div>
         </div>
-        <div class="d-none d-lg-flex fw-bold px-2 px-md-3 px-lg-4 text-center " style="flex: 1;">
-          <div @click="logout" class="text-center"><i class="fa-solid fa-power-off fa-lg"></i></div>
+        <div class="d-none d-lg-flex fw-bold px-2 px-md-3 px-lg-4 text-center" style="flex: 1;">
+          <div class="dropdown text-center">
+            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-power-off fa-lg"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li>
+                <a class="dropdown-item" href="#" @click="logout">
+                  <i class="fa-solid fa-power-off fa-lg"></i> Logout
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        
+     
+
       </div>
 
     </div>
@@ -45,49 +59,89 @@
       <div class="modal-content" @click.stop>
         <button class="close-btn fw-bold fs-1" @click="toggleModal">&times;</button>
         <nav class="modal-nav">
-          <router-link to="/admin" class="text-decoration-none text-info" @click="toggleModal">
+          <router-link to="/admin" class="text-decoration-none text-info fw-bold" @click="toggleModal">
             Admin</router-link>
-          <router-link to="/" class="text-decoration-none text-info" @click="toggleModal"> Home</router-link>
-          <router-link to="/about" class="text-decoration-none text-info" @click="toggleModal">
+          <router-link to="/" class="text-decoration-none text-info fw-bold" @click="toggleModal"> Home</router-link>
+          <router-link to="/about" class="text-decoration-none text-info fw-bold" @click="toggleModal">
             About</router-link>
-          <router-link to="/contact" class="text-decoration-none text-info" @click="toggleModal">
+          <router-link to="/contact" class="text-decoration-none text-info fw-bold" @click="toggleModal">
             Contact</router-link>
-          <div class=" text-info">
-            <div @click="logout">Logout</div>
+          <div class="text-info fw-bold">
+            <div @click="cancelOkModal" style="cursor: pointer;">Logout</div>
           </div>
         </nav>
       </div>
     </div>
 
+    <!-- logout modal  -->
+     <CancelOk v-if="showModal"  :show-modal="showModal" @confirm-logout="logout" @cancel="showModal = false"/>
 
   </div>
 </template>
 
 <script>
 import Search from './DataHandlers/search.vue';
+import CancelOk from './modal/cancelOk.vue';
 
 export default {
   components: {
-    Search
+    Search,
+    CancelOk
   },
   data() {
     return {
       isModalVisible: false,
+      showModal: false,
+
     };
   },
   methods: {
     logout() {
       localStorage.removeItem('token');
       this.$router.push("/login")
+      this.showModal = false;
     },
     toggleModal() {
       this.isModalVisible = !this.isModalVisible;
     },
+    cancelOkModal(){
+      this.showModal = true
+      this.toggleModal()
+    }
   }
 }
 </script>
 
 <style scoped>
+.router-link-active, .router-link:hover, .router-link:focus {
+  position: relative;
+  color: #17a2b8; 
+}
+.router-link-active::after, .router-link:hover::after, .router-link:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%;
+  height: 2px; 
+  background-color: #17a2b8;
+  transition: width 0.3s ease-in-out;
+}
+.router-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #17a2b8;
+  transition: width 0.3s ease-in-out;
+}
+.router-link:hover::after, .router-link:focus::after {
+  width: 100%;
+}
+
+
 .modal-overlay {
   position: fixed;
   top: 0;

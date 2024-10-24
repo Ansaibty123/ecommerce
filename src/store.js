@@ -83,6 +83,9 @@ const store = createStore({
     allProducts(state) {
       return state.filterProducts;
     },
+    cartProduct(state){
+      return state.Cart
+    },
     totalCost(state) {
       console.log(state.Cart);
       return state.Cart.reduce((total, item) => {

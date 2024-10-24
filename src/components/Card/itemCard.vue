@@ -16,7 +16,7 @@
                 <span v-for="star in 5" :key="star" class="fa"
                   :class="{
                     'fa-star': star <= Math.floor(item.rating.rate),
-                    'fa-star-half-o': star === Math.ceil(item.rating.rate) && item.rating.rate % 1 !== 0, // Half star
+                    'fa-star-half-o': star === Math.ceil(item.rating.rate) && item.rating.rate % 1 !== 0, 
                     'fa-star-o': star > item.rating.rate
                   }"></span>
               </span>

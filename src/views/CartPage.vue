@@ -7,12 +7,12 @@
         <div class="col-12 " v-for="item in cartItems" :key="item.id">
           <div class="card shadow">
             <div class="d-flex justify-content-between">
-              <div class="col-4 text-center">
+              <div class="col-4 text-center" @click="goToProduct(item.id)">
                 <img :src="item.image" class="img-fluid rounded p-3" alt="Product Image" />
               </div>
-              <div class="col-8">
-                <div class="card-body">
-                  <h6 class="card-title">{{ item.title }}</h6>
+              <div class="col-8 ">
+                <div class="card-body h-100 d-flex flex-column justify-content-between">
+                  <h6 class="card-title" @click="goToProduct(item.id)">{{ item.title }}</h6>
                   <p class="card-text">Price: ${{ item.price }}</p>
                   <p class="card-text">
                     <small class="text-muted">Quantity: {{ item.quantity }}</small>
@@ -66,6 +66,9 @@ export default {
     checkout() {
       alert('Proceeding to checkout');
     },
+    goToProduct(productId) {
+            this.$router.push({ name: "ProductPage", params: { id: productId } })
+        }
   },
 };
 </script>

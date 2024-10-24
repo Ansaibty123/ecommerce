@@ -54,7 +54,12 @@ export default {
   },
   methods: {
     addToCart(productId) {
-      this.$store.commit("addToCart", productId)
+      const isProductInCart = this.$store.getters.cartProduct.some(product => product.id === productId);
+      if (isProductInCart) {
+        this.$router.push({ name: 'cart' });
+      } else {
+        this.$store.commit("addToCart", productId);
+      }
     }
   },
   computed: {
