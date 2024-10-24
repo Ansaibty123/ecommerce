@@ -1,5 +1,9 @@
 <template>
     <div class="container-fluid w-100 g-0">
+        <div>
+            <FiltersSorting/>
+        </div>
+
         <div class="row g-0 ">
             <div v-for="item in allProducts" :key="item.id"
                 class="col-md-4 col-lg-3 col-6 d-flex justify-content-center">
@@ -12,11 +16,14 @@
 < <script>
 import { mapGetters } from 'vuex';
 import ItemCard from './Card/itemCard.vue';
+import FiltersSorting from './FiltersSorting.vue';
+
 
 
 export default {
     components: {
-        ItemCard
+        ItemCard,
+        FiltersSorting
     },
     computed: {
         ...mapGetters(['allProducts'])
@@ -24,10 +31,11 @@ export default {
 
     mounted() {
         this.$store.dispatch('getProducts').then(() => {
-            console.log(this.allProducts)
+            // console.log(this.allProducts)
 
         })
-
-    }
+      
+    },
+  
 }
 </script>
