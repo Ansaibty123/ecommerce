@@ -10,12 +10,31 @@ const store = createStore({
       filterProducts: [],
       searchItem: "",
       Cart: JSON.parse(localStorage.getItem("cart")) || [],
+      wishList: JSON.parse(localStorage.getItem("wishlist")) || [],
+      userAddress: JSON.parse(localStorage.getItem("address")) || [],
+
     };
   },
   mutations: {
     setProducts(state, products) {
       state.products = products;
       state.filterProducts = products;
+    },
+    addAddress (state,address){
+     state.userAddress.push(address)
+     localStorage.setItem("address",JSON.stringify(state.userAddress))
+    },
+    addToWishlist(state, productId) {
+      const product = state.products.find((item) => item.id === productId);
+      // console.log(product)
+      if (product) {
+        state.wishList.push(product);
+        localStorage.setItem("wishlist", JSON.stringify(state.wishList));
+        console.log("Added");
+      }else {
+        console.log("product not found");
+
+      }
     },
     addToCart(state, productId) {
       const product = state.products.find((item) => item.id === productId);
@@ -32,6 +51,13 @@ const store = createStore({
       if (productIndex !== -1) {
         state.Cart.splice(productIndex, 1);
         localStorage.setItem("cart", JSON.stringify(state.Cart));
+      }
+    },
+    removeWishlistItems(state, producId){
+      const productIndex = state.wishList.findIndex((item) => item.id === producId);
+      if (productIndex !== -1) {
+        state.wishList.splice(productIndex, 1);
+        localStorage.setItem("wishlist", JSON.stringify(state.wishList));
       }
     },
     filterCategory(state, Category) {
@@ -53,8 +79,8 @@ const store = createStore({
         state.filterProducts = state.products.filter((item) =>
           item.title.toLowerCase().includes(state.searchItem.toLowerCase())
         );
-      } else  {
-        state.filterProducts = state.products
+      } else {
+        state.filterProducts = state.products;
       }
     },
     sortHighToLow(state) {
@@ -83,11 +109,17 @@ const store = createStore({
     allProducts(state) {
       return state.filterProducts;
     },
-    cartProduct(state){
-      return state.Cart
+    cartProduct(state) {
+      return state.Cart;
+    },
+    addressList(state){
+      return state.userAddress
+    },
+    wishListProduct(state) {
+      return state.wishList;
     },
     totalCost(state) {
-      console.log(state.Cart);
+      // console.log(state.Cart);
       return state.Cart.reduce((total, item) => {
         if (item.price) {
           return total + item.price;

@@ -2,7 +2,7 @@
   <div class="d-flex px-2 px-md-3 py-3 px-lg-5 py-lg-4 border justify-content-between shadow-sm gap-2 gap-md-5">
 
     <div class="d-flex gap-2 gap-sm-4 fw-bold text-success align-items-center">
-      <button class="navbar-toggler d-block d-lg-none " type="button" @click="toggleModal">
+      <button class="navbar-toggler d-block  " type="button" @click="toggleModal">
         <i class="fa-solid fa-burger fa-2x"></i>
       </button>
       <div class="fs-6 ">
@@ -28,9 +28,9 @@
           </RouterLink>
         </div>
         <div class="fw-bold px-2 px-md-3 px-lg-4  " style="flex: 1;">
-          <div @click="wishList" class="text-center">
+          <RouterLink to="/wishlist" class="text-center">
             <i class="fa-solid fa-heart fa-lg"></i>
-          </div>
+          </RouterLink>
         </div>
         <div class="d-none d-lg-flex fw-bold px-2 px-md-3 px-lg-4 text-center" style="flex: 1;">
           <div class="dropdown text-center">
@@ -66,6 +66,8 @@
             About</router-link>
           <router-link to="/contact" class="text-decoration-none text-info fw-bold" @click="toggleModal">
             Contact</router-link>
+            <router-link to="/address" class="text-decoration-none text-info fw-bold" @click="toggleModal">
+              Address</router-link>
           <div class="text-info fw-bold">
             <div @click="cancelOkModal" style="cursor: pointer;">Logout</div>
           </div>

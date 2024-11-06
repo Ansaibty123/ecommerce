@@ -9,6 +9,8 @@ import CartPage from "@/views/CartPage.vue";
 import ForgotPasswordPage from "@/views/ForgotPasswordPage.vue";
 import NewPasswordPage from "@/views/NewPasswordPage.vue";
 import AdminPage from "@/views/AdminPage.vue";
+import AddressPage from "@/views/AddressPage.vue";
+import WishlistPage from "@/views/WishlistPage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -48,6 +50,17 @@ const router = createRouter({
       path: "/cart",
       name: "cart",
       component: CartPage,
+      meta: { requiresAuth: true },
+    },
+    {
+      path: "/wishlist",
+      name: "wishlist",
+      component: WishlistPage,
+    },
+    {
+      path: "/address",
+      name: "address",
+      component: AddressPage,
       meta: { requiresAuth: true },
     },
 
