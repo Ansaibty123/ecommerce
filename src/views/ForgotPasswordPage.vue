@@ -84,7 +84,7 @@ export default {
       const email = this.email
       try {
         // console.log("requesting")
-        const response = await axios.post("http://localhost:3000/api/reset/request-reset-password", { email });
+        const response = await axios.post("https://expressbackend-for-ecomerce.onrender.com/api/reset/request-reset-password", { email });
         if (response.status === 200) {
           this.statusResponse = "Link sent succesfully to gmail"
 

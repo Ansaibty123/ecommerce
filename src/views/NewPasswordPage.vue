@@ -84,7 +84,7 @@ export default {
             this.loading = true;
 
             try {
-                const response = await axios.post("http://localhost:3000/api/reset/reset-password", {
+                const response = await axios.post("https://expressbackend-for-ecomerce.onrender.com/api/reset/reset-password", {
                     newPassword,
                     token
                 })

@@ -65,7 +65,7 @@ export default {
     const email = this.email;
     const password = this.password;
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/signup', {
+      const response = await axios.post('https://expressbackend-for-ecomerce.onrender.com/api/auth/signup', {
         name,
         email,
         password
