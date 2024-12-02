@@ -21,7 +21,7 @@
     methods: {
       async fetchUserRole() {
         try {
-          const response = await axios.get("http://localhost:3000/api/role/admin", {
+          const response = await axios.get("https://expressbackend-for-ecomerce.onrender.com/api/role/admin", {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`, 
             },
