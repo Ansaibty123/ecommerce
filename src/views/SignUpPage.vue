@@ -4,7 +4,7 @@
 
       <div class="fs-1 py-3 fw-bold">Create an account</div>
 
-      <div class="fs-3 col-6 custom-max-width d-flex justify-content-center">
+      <div class="fs-3 col-9 custom-max-width d-flex justify-content-center">
         <form @submit.prevent="handleSignup" class="d-flex flex-column gap-4 w-100">
           <div class="d-flex flex-column fw-bold">
 
