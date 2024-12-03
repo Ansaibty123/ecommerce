@@ -62,7 +62,7 @@ export default {
         }
     },
     mounted() {
-        this.token = this.$route.params.token
+        this.token = this.$route.params.id
         // console.log(this.token)
     },
     methods: {
