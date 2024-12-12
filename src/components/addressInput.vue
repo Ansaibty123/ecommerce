@@ -1,5 +1,5 @@
 <template>
-    <div class="text-bg-info vh-100 py-5">
+    <div class="text-bg-dark vh-100 py-5">
         <div class="row justify-content-center align-items-center h-100">
             <form action="" @submit.prevent="handlerAddAddress"
                 class="text-bg-info w-75 d-flex flex-column gap-4 align-items-center ">
@@ -50,6 +50,13 @@ export default {
                 streetName : this.streetName
             }
             this.addAddress(userAddress)
+            this.fullName = "";
+            this.phoneNumber = "";
+            this.stateName ="";
+            this.stateName = "";
+            this.city = "";
+            this.streetName = ""
+
         }
     }
 }

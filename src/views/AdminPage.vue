@@ -1,9 +1,9 @@
 <template>
     <div class="bg-black vh-100 d-flex justify-content-center align-items-center">
-      <div v-if="isAdmin" class="text-white fw-bold fs-1">
+      <div v-if="isAdmin" class="text-white fw-bold fs-1 p-3 text-center">
         Hi!!! Welcome Admin
       </div>
-      <div v-else class="text-white fw-bold fs-1">
+      <div v-else class="text-white fw-bold fs-1 p-3 text-center">
         Hi!!! You don't have admin access
       </div>
     </div>
