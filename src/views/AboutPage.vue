@@ -1,8 +1,8 @@
 <template>
     <div>
         <Navbar/>
-        <div class="vh-100 bg-dark">
-            <div class="cointainer d-flex justify-content-center fs-4 align-items-center fw-bold text-white">
+        <div class="vh-100 bg-dark d-flex justify-content-center align-items-center">
+            <div class="cointainer fs-4 fs-md-2 fs-lg-1 fw-bold text-white">
                 ABOUT PAGE
             </div>
         </div>
