@@ -43,6 +43,7 @@ export default {
     width: 100px;
     box-shadow: 0 2px 14px yellow; 
     border-radius: 10px; 
+    background-color: white;
 
 }
 
