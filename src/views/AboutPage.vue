@@ -2,7 +2,7 @@
     <div>
         <Navbar/>
         <div class="vh-100 bg-dark">
-            <div class="cointainer d-flex justify-content-center fs-4 align-items-center fw-bold">
+            <div class="cointainer d-flex justify-content-center fs-4 align-items-center fw-bold text-white">
                 ABOUT PAGE
             </div>
         </div>
