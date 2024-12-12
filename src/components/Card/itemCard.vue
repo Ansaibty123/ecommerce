@@ -68,6 +68,9 @@ export default {
 .fa-star-o {
   font-size: 20px;
 }
+.shadow-lg {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8) !important; /* White shadow */
+}
 
 @media(min-width:768px) {
     .custom-image {

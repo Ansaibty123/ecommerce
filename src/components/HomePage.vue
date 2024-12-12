@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid w-100 g-0">
+    <div class="container-fluid w-100 g-0 bg-dark">
         <div>
             <FiltersSorting/>
         </div>
