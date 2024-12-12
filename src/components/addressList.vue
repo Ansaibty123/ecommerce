@@ -12,7 +12,10 @@
           <div>{{ address.state }}</div>
           <div>{{ address.city }}</div>
           <div>{{ address.streetName }}</div>
-          <button @click="deleteAddress(index)" class="w-50 py-2 fw-bold fs-5 btn btn-success">DELETE</button>
+          <div class="text-center pt-2">
+
+            <button @click="deleteAddress(index)" class="w-50 py-1 fw-bold fs-6 btn btn-warning text-dark">DELETE</button>
+          </div>
         </div>
       </div>
     </div>
