@@ -12,6 +12,7 @@
           <div>{{ address.state }}</div>
           <div>{{ address.city }}</div>
           <div>{{ address.streetName }}</div>
+          <button @click="deleteAddress(index)" class="w-50 py-2 fw-bold fs-5 btn btn-success">DELETE</button>
         </div>
       </div>
     </div>
@@ -24,6 +25,13 @@
     computed: {
       ...mapGetters(["addressList"]),
     },
+    methods: {
+    ...mapActions(["removeAddress"]),
+
+    deleteAddress(index) {
+      this.removeAddress(index);
+    },
+  },
     watch : {
         
     }

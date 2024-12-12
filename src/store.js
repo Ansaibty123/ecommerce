@@ -24,6 +24,13 @@ const store = createStore({
      state.userAddress.push(address)
      localStorage.setItem("address",JSON.stringify(state.userAddress))
     },
+    removeAddress(state, index) {
+      if (index >= 0 && index < state.userAddress.length) {
+        state.userAddress.splice(index, 1);
+        localStorage.setItem("address", JSON.stringify(state.userAddress)); // Update localStorage
+      }
+    },
+  
     addToWishlist(state, productId) {
       const product = state.products.find((item) => item.id === productId);
       // console.log(product)
@@ -103,6 +110,9 @@ const store = createStore({
       } catch (error) {
         console.error("Error fetching products:", error);
       }
+    },
+    removeAddress({ commit }, index) {
+      commit("removeAddress", index);
     },
   },
   getters: {
