@@ -5,10 +5,10 @@
         <div class="custom-image p-2">
             <img :src="item.image" alt="" class="img-fluid custom-img">
         </div>
-        <div class="custom-text fs-6 p-1">
+        <div class="custom-text fs-6 p-1 text-white text-start">
             {{ item.title }}
         </div>
-        <div class="custom-text fw-bold p-1 text-start w-100 ">
+        <div class="custom-text fw-bold p-1 text-start w-100 text-white ">
             $ {{ item.price }}
         </div>
         <div class="text-start w-100">
@@ -41,7 +41,9 @@ export default {
 .custom-image {
     height: 100px;
     width: 100px;
-
+    box-shadow: 0 4px 8px rgba(255, 255, 0, 0.7); 
+    border-radius: 10px; 
+    padding: 10px
 }
 
 .custom-img {
