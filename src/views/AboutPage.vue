@@ -1,7 +1,11 @@
 <template>
     <div>
         <Navbar/>
-        aboutpage
+        <div class="vh-100 bg-dark">
+            <div class="cointainer">
+                ABOUT PAGE
+            </div>
+        </div>
     </div>
 </template>
 
