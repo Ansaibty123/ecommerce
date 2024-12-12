@@ -2,7 +2,7 @@
     <div class="text-bg-dark vh-100 py-5">
         <div class="row justify-content-center align-items-center h-100">
             <form action="" @submit.prevent="handlerAddAddress"
-                class="text-bg-info w-75 d-flex flex-column gap-4 align-items-center ">
+                class="text-bg-dark w-75 d-flex flex-column gap-4 align-items-center ">
                 <input type="text" name="name" v-model="fullName" id="" placeholder="Full Name (Required)*"
                     class="w-100 custom-width form-control py-3 fs-5" required>
                 <input type="number" name="phonenumber" v-model="phoneNumber" id=""
@@ -53,7 +53,7 @@ export default {
             this.fullName = "";
             this.phoneNumber = "";
             this.stateName ="";
-            this.stateName = "";
+            this.pinCode = "";
             this.city = "";
             this.streetName = ""
 
@@ -65,5 +65,6 @@ export default {
 <style scoped>
 .custom-width {
     max-width: 900px;
+    box-shadow: 0 4px 12px white;
 }
 </style>
