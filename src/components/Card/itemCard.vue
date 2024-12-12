@@ -2,7 +2,7 @@
     <div @click="goToProduct(item.id)" class="p-2 p-md-3 d-flex 
     flex-column align-items-center justify-content-between
      shadow-lg border-success my-3 my-md-4">
-        <div class="custom-image ">
+        <div class="custom-image p-1">
             <img :src="item.image" alt="" class="img-fluid custom-img">
         </div>
         <div class="custom-text fs-6 p-1 text-white text-start">
